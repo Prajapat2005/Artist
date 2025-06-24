@@ -20,10 +20,12 @@ export default function ArtistsPage() {
   const [showFilters, setShowFilters] = useState(false)
 
   useEffect(() => {
+
     const categoryParam = searchParams.get("category")
     if (categoryParam) {
-      setSelectedCategories([...selectedCategories, categoryParam])
+      setSelectedCategories([categoryParam])
     }
+
   }, [searchParams]);
 
   // Filter artists based on selected criteria
