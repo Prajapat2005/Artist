@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -10,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
 import { CheckCircle, User, Briefcase, DollarSign, Camera } from "lucide-react"
-import { toast } from "@/hooks/use-toast"
 import PersonalInformation from "@/components/personalInfo"
 import PersonalDetails from "@/components/personalDetails"
 import SkillaAndPricing from "@/components/skillsAndPricing"
@@ -120,11 +118,6 @@ export default function OnboardingPage() {
     await new Promise((resolve) => setTimeout(resolve, 2000))
 
     console.log("Form submitted:", { ...data, profileImage })
-
-    toast({
-      title: "Application Submitted!",
-      description: "We'll review your profile and get back to you within 24 hours.",
-    })
 
     setIsSubmitting(false)
     setCurrentStep(totalSteps + 1) // Success step

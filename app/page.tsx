@@ -1,3 +1,4 @@
+"use client"
 import Hero from "@/components/heroSection"
 import Categories from "@/components/categories"
 
