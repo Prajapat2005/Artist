@@ -7,8 +7,9 @@ import { mockArtists, type Artist } from "@/lib/mock-data"
 import { Filter, Grid, List } from "lucide-react"
 import Filters from "@/components/filters"
 import Artists from "@/components/artists"
+import { Suspense } from "react"
 
-export default function ArtistsPage() {
+function ArtistsPageContent() {
   const searchParams = useSearchParams()
   const [artists, setArtists] = useState<Artist[]>(mockArtists)
   const [filteredArtists, setFilteredArtists] = useState<Artist[]>(mockArtists)
@@ -164,5 +165,13 @@ export default function ArtistsPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function ArtistsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ArtistsPageContent />
+    </Suspense>
   )
 }
