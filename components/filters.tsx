@@ -23,8 +23,8 @@ interface FILTER {
 
 const Filters = ({ showFilters, clearFilters, searchTerm, setSearchTerm, selectedCategories, handleCategoryChange, selectedPriceRange, setSelectedPriceRange, selectedLocation, setSelectedLocation }: FILTER) => {
     return (
-        <div className={`lg:w-80 ${showFilters ? "block" : "hidden lg:block"}`}>
-            <Card className="sticky top-24">
+        <div className={`lg:w-80  ${showFilters ? "block" : "hidden lg:block"}`}>
+            <Card className="sticky top-24 overflow-y-scroll">
                 <CardHeader>
                     <div className="flex items-center justify-between">
                         <h3 className="text-lg font-semibold">Filters</h3>

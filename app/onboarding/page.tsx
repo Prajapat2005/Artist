@@ -180,13 +180,12 @@ export default function OnboardingPage() {
 
             return (
               <div key={index} className="flex flex-col items-center">
-                <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${isCompleted
-                    ? "bg-green-500 text-white"
-                    : isActive
-                      ? "bg-primary text-white"
-                      : "bg-gray-200 text-gray-500"
-                    }`}
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center mb-2 ${isCompleted
+                  ? "bg-green-500 text-white"
+                  : isActive
+                    ? "bg-primary text-white"
+                    : "bg-gray-200 text-gray-500"
+                  }`}
                 >
                   <StepIcon className="h-5 w-5" />
                 </div>

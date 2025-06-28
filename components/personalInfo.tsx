@@ -90,7 +90,7 @@ const PersonalInformation = ({ profileImage, setProfileImage, handleImageUpload,
                     id="bio"
                     {...register("bio")}
                     placeholder="Tell us about your experience, style, and what makes you unique as a performer..."
-                    className="mt-1 min-h-32"
+                    className="mt-1 max-h-32"
                 />
                 <div className="flex justify-between text-sm text-gray-500 mt-1">
                     <span>{errors.bio?.message}</span>
